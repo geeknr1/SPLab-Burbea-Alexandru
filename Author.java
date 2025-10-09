@@ -1,9 +1,11 @@
 public class Author {
 
     private String name;
+    private String surname;
 
-    public Book(String n){
-        this.name=n;
+    public Book(String n, String s){
+        this.name = n;
+        this.surname = s;
     }
 
     public String getAuthorName(){
@@ -14,7 +16,15 @@ public class Author {
         this.name = newAuthorName;
     }
 
+    public String getAuthorSurname(){
+        return this.surname;
+    }
+
+    public void setAuthorSurname(String newAuthorSurname){
+        this.surname = newAuthorSurname;
+    }
+
     public void print(){
-        System.out.println("Book title: " + this.name);
+        System.out.println("Author's name: " + this.name + "\nAuthor's surname: " + this.surname);
     }
 }
