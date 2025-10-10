@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class Chapter{
+public class Section{
     private String chapterName;
     private ArrayList<Subchapter> subchapters;
 
