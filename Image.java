@@ -34,6 +34,7 @@ public class Image implements Element{
 
     @Override
     public void print(){
+        System.out.println(imageURL);
         for(Element url: imageURLs){
             System.out.println(url);
         }

@@ -1,13 +1,15 @@
 import java.util.ArrayList;
 
-public class Book {
+public class Book{
 
     private String title;
-    private ArrayList<Chapter> chapters;
+    private ArrayList<Author> authors;
+    private ArrayList<Element> elements;
 
     public Book(String t){
         this.title=t;
-        this.chapters=new ArrayList<>();
+        this.authors = new ArrayList<>();
+        this.elements = new ArrayList<>();
     }
 
     public String getTitle(){
@@ -18,15 +20,25 @@ public class Book {
         this.title = newTitle;
     }
 
-    public void addChapter(String newChapterNameAdded){
-        Chapter newChapterAdded = new Chapter(newChapterNameAdded);
-        chapters.add(newChapterAdded);
+    public void addAuthor(Author newAUthor){
+        authors.add(newAUthor);
+    }
+
+    public void addContent(Element newElementAdded){
+        elements.add(newElementAdded);
+    }
+
+    public void removeContent(Element newElementRemoved){
+        elements.remove(newElementRemoved);
     }
 
     public void print(){
         System.out.println("Book title: " + this.title);
-        for(Chapter chapter: chapters){
-            chapter.print();
+        for(Author a: authors){
+            a.print();
+        }
+        for(Element newElement: elements){
+            newElement.print();
         }
     }
 }

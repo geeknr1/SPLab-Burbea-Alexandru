@@ -1,41 +1,42 @@
 import java.util.ArrayList;
 
-public class Paragraph implements Element{
-    private String paragraph;
-    ArrayList<Element> paragraphs;
+public class textParagraph implements Element{
+    private String textParagraph;
+    ArrayList<Element> textParagraphs;
 
-    public Paragraph(String par){
-        this.paragraph=par;
-        paragraphs = new ArrayList<>();
+    public textParagraph(String par){
+        this.textParagraph=par;
+        textParagraphs = new ArrayList<>();
     }
 
-    public String getParagraph(){
-        return this.paragraph;
+    public String gettextParagraph(){
+        return this.textParagraph;
     }
 
-    public void setParagraph(String newParagraph){
-        this.paragraph = newParagraph;
-    }
-
-    @Override
-    public Element get(int paragraphNumber){
-        return paragraphs.get(paragraphNumber);
+    public void settextParagraph(String newtextParagraph){
+        this.textParagraph = newtextParagraph;
     }
 
     @Override
-    public void add(Element newParagraphAdded){
-        paragraphs.add(newParagraphAdded);
+    public Element get(int textParagraphNumber){
+        return textParagraphs.get(textParagraphNumber);
     }
 
     @Override
-    public void remove(Element newParagraphRemoved){
-        paragraphs.remove(newParagraphRemoved);
+    public void add(Element newtextParagraphAdded){
+        textParagraphs.add(newtextParagraphAdded);
+    }
+
+    @Override
+    public void remove(Element newtextParagraphRemoved){
+        textParagraphs.remove(newtextParagraphRemoved);
     }
 
     @Override
     public void print(){
-        for(Paragraph p: paragraphs){
-            System.out.println(p);
-        }
+        System.out.println(textParagraph);
+        // for(textParagraph p: textParagraphs){
+        //     System.out.println(p);
+        // }
     }
 }
