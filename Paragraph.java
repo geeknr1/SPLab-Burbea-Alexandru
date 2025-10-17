@@ -9,7 +9,7 @@ public class textParagraph implements Element{
         textParagraphs = new ArrayList<>();
     }
 
-    public String gettextParagraph(){
+    public String getTextParagraph(){
         return this.textParagraph;
     }
 

@@ -3,7 +3,7 @@ public class Author {
     private String name;
     private String surname;
 
-    public Book(String n, String s){
+    public Author(String n, String s){
         this.name = n;
         this.surname = s;
     }

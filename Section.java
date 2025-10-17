@@ -4,7 +4,7 @@ public class Section implements Element{
     private String sectionName;
     private ArrayList<Element> elements;
 
-    public Chapter(String section){
+    public Section(String section){
         this.sectionName=section;
         elements=new ArrayList<>();
     }
@@ -13,7 +13,7 @@ public class Section implements Element{
         return this.sectionName;
     }
 
-    public void setChapterName(String newSectionName){
+    public void setSectionName(String newSectionName){
         this.sectionName=newSectionName;
     }
 
@@ -36,7 +36,7 @@ public class Section implements Element{
     public void print(){
         System.out.println(sectionName);
         for(Element e: elements){
-            System.out.println(e);
+            e.print();
         }
     }
 }
