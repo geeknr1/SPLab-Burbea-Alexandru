@@ -1,8 +1,7 @@
-
 public interface Element{
     
     void print();
-    void add(Element element);
-    void remove(Element element);
-    Element get(int elementNumber);
+    default void add(Element element){};
+    default void remove(Element element){};
+    default Element get(int elementNumber){return null;};
 }

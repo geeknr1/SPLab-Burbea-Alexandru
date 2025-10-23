@@ -1,42 +1,36 @@
-import java.util.ArrayList;
-
-public class textParagraph implements Element{
+public class Paragraph implements Element{
     private String textParagraph;
-    ArrayList<Element> textParagraphs;
+    private AlignStrategy align;
+    private Context context;
 
-    public textParagraph(String par){
+    public Paragraph(String par, AlignStrategy align, Context context){
         this.textParagraph=par;
-        textParagraphs = new ArrayList<>();
+        this.align = align;
+        this.context = context;
     }
 
     public String getTextParagraph(){
         return this.textParagraph;
     }
 
+    public AlignStrategy getAlign(){
+        return this.align;
+    }
+
+    public Context getContext(){
+        return this.context;
+    }
+
     public void settextParagraph(String newtextParagraph){
         this.textParagraph = newtextParagraph;
     }
 
-    @Override
-    public Element get(int textParagraphNumber){
-        return textParagraphs.get(textParagraphNumber);
-    }
-
-    @Override
-    public void add(Element newtextParagraphAdded){
-        textParagraphs.add(newtextParagraphAdded);
-    }
-
-    @Override
-    public void remove(Element newtextParagraphRemoved){
-        textParagraphs.remove(newtextParagraphRemoved);
+    public void setAlignStrategy(AlignStrategy newAlign){
+        this.align = newAlign;
     }
 
     @Override
     public void print(){
-        System.out.println(textParagraph);
-        // for(textParagraph p: textParagraphs){
-        //     System.out.println(p);
-        // }
+        align.render(this, context);
     }
 }

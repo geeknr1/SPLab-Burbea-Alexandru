@@ -7,15 +7,16 @@ public class ImageProxy implements Element {
     }
 
     private Image loadImage() {
+        String imageTitle = "image";
         if (realImage == null) {
-            realImage = new Image(url);
+            realImage = new Image(url, imageTitle);
         }
         return realImage;
     }
 
     @Override
     public void print() {
-        loadImage().print();
+        System.out.println(url);
     }
 
     @Override

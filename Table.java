@@ -1,4 +1,4 @@
-public class Table extends Element{
+public class Table implements Element{
     private String title;
 
     public Table(String t){
@@ -13,7 +13,27 @@ public class Table extends Element{
         this.title = otherTableTitle;
     }
 
-    public void print(){
+    // public void print(){
+    //     System.out.println("Table title: " + this.title);
+    // }
+
+    @Override
+    public Element get(int urlNumber) {
+        return null;
+    }
+
+    @Override
+    public void add(Element newURLAdded) {
+        
+    }
+
+    @Override
+    public void remove(Element newURLRemoved) {
+        
+    }
+
+    @Override
+    public void print() {
         System.out.println("Table title: " + this.title);
     }
 }
